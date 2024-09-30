@@ -79,7 +79,13 @@ cantidad = st.number_input("Ingresa la cantidad:", value=1)
 precio_por_unidad = st.number_input("Ingresa el precio por unidad:", value=10)
 st.write("El precio total es:", producto(nombre_producto, cantidad, precio_por_unidad))
 
-
+st.header("Ejercicio 7: Números pares e impares")
+numeros = st.text_input("Ingresa una lista de números separados por comas:")
+if numeros:
+    lista_numeros = list(map(int, numeros.split(',')))
+    pares, impares = numeros_pares_e_impares(lista_numeros)
+    st.write("Números pares:", pares)
+    st.write("Números impares:", impares)
 
 st.header("Ejercicio 8: Multiplicación con *args")
 numeros = st.text_input("Ingresa una lista de números separados por comas:")
@@ -100,3 +106,4 @@ num1 = st.number_input("Ingresa el primer número:", value=0)
 num2 = st.number_input("Ingresa el segundo número:", value=0)
 operacion = st.selectbox("Selecciona la operación:", ["suma", "resta", "multiplicacion", "division"])
 st.write("El resultado es:", calculadora_flexible(num1, num2, operacion))
+    
